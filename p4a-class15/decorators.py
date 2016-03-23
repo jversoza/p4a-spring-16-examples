@@ -35,7 +35,15 @@ def timer(f):
 
     return new_f
 
+
 def cached(f):
+    """Memoizes (saves) results of function call. retrieves from cache if
+    arguments are the same, otherwise, executes function. For a more robust
+    version of caching that uses some more advanced Python features, check
+    this out the following article: 
+    
+    https://datqaguy.wordpress.com/2015/08/20/python-memoize-tutorial/
+    """
     cache = {}
     def new_f(*args):
         if args in cache:
