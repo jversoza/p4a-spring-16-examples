@@ -115,7 +115,7 @@ while True:
             response_body = handle_route(req)
 
             # notice that the body comes after a blank line (2 \r\n's)
-            res = 'HTTP/1.1 200 OK\r\n\r\n{}'.format(response_body)
+            res = 'HTTP/1.1 200 OK\r\nContent-Type:text/html\r\n\r\n{}'.format(response_body)
         else:
             # if the key doesn't exist, that means we don't have that
             # path! give back a 404
