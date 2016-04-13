@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+This works!!!!!
+<ul>
+{% for item in things_todo %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
