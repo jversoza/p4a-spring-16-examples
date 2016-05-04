@@ -12,12 +12,12 @@ Clustering
 Timeline
 -----
 
-* MON 5/2 - 2nd milestone (just 3rd class and second research topic)
+* TUE 5/3 - 2nd milestone (just 3rd class and second research topic)
 * WED 5/4 - maybe partial review? 
 * FRI 5/6 - optional assignment (use as review!)
 * SAT 5/7 - final project due, late policy tbd\*
 * MON 5/9 - review
-* WED 5/12 - final exam
+* WED 5/11 - final exam
 
 Late Policy - 10% off of grade, but... considering
 
@@ -44,6 +44,7 @@ Final Exam
 * first exam, 8am :( 
 * I'll have cleaned up notes up by this evening
 * we can do more than one review
+    * let me know what you want me to review on Wednesday
 
 Final Project
 -----
@@ -75,10 +76,12 @@ print('Copy the output above between the lines (---\'s) into a new file called r
     * modules used
     * location and name of classes / decorators and purpose
     * location of list comprehension
+    * what would go in readme (how to run)... including usernames, etc.
     * list tutorials or existing projects that code is based off of (more than a couple of lines)
         * again, majority of your code should be your own
         * fine to base stuff off of homework or in class examples
         * but make sure code is not just a repeat of a single assignment or example
+    * "happy path" ... direct me on how to use your applications
 
 Optional Assignment
 -----

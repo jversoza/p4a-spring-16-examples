@@ -180,7 +180,7 @@ def k_means(k, data, repeats):
         centroids = generate_new_centroids(clusters, data)
     return clusters
 
-k_means(5, d, 2)
+k_means(5, d, 5)
 
 
 
@@ -197,7 +197,6 @@ with open('earthquakes.txt', 'r') as f:
     clusters = k_means(5, data, 1000)
     print(clusters)
 
- 
     eq_map = Basemap(projection='robin', resolution = 'l', area_thresh = 1000.0,
               lat_0=0, lon_0=-130)
     eq_map.drawcoastlines()

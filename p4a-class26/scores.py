@@ -162,20 +162,6 @@ print('generating new centroids', generate_new_centroids([[7, 13, 15, 16], [0, 2
 generating new centroids [[93.75], [27.3], [71.25], [87.0], [78.0]]
 """
 def generate_new_centroids(clusters, data):
-    for cluster_index, cluster in enumerate(clusters):
-        # initialize a bunch of 0's
-        # based on how many features we have per data point
-        sum_features = [0] * len(data[0])
-
-        for data_point_i, data_index in enumerate(cluster):
-            # remember... our clusters consist of list of indexes of data points in
-            # original data
-            data_point = data[data_index]
-            """
-            PICK UP HERE
-            """
-"""
-def generate_new_centroids(clusters, data):
 
     new_centroids = []
     # for every cluster
@@ -206,9 +192,41 @@ def generate_new_centroids(clusters, data):
     return new_centroids
 
 print('generating new centroids', generate_new_centroids([[7, 13, 15, 16], [0, 2, 3, 5, 8, 9, 11, 17, 19, 20], [1, 6, 10, 18], [4], [12, 14]], d))
+
 """
+1. generated initial centroids
+2. grouped data points into clusters based on closeness to centroids
+3. calculated new centroids
+4. go back to 2
+
+repeat n times
+or repeat until centroids don't change
+or try to repeat until centroids don't change, unless centroids just go back and forth between two "values"
+"""
+print('generating new centroids', generate_new_centroids([[7, 13, 15, 16], [0, 2, 3, 5, 8, 9, 11, 17, 19, 20], [1, 6, 10, 18], [4], [12, 14]], d))
 
 
+def k_means(k, data, repeats):
+    centroids = generate_initial_centroids(k, data)
+    #centroids = [[90], [34], [76], [87], [78]]
+    #centroids = [[90], [34], [76], [87], [78]]
+    for rep in range(repeats):
+        print("\nPASS", rep)
+        clusters = generate_clusters(k, centroids, data)
+        for c in clusters:
+            print("CLUSTER")
+            for key in c:
+                print(data[key], end=' ')
+            print()
+        centroids = generate_new_centroids(clusters, data)
+    return clusters
+
+"""
+5 is number of clusers
+d is original data set
+2 is repetitions
+"""
+k_means(5, d, 5)
 
 
 
